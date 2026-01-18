@@ -32,11 +32,11 @@ const popularProducts = [
 export default function PopularSection() {
   return (
     <section className="relative overflow-hidden py-24 border-t border-white/10">
-      {/* Background glow like banner */}
+      
       <div className="absolute inset-0 -z-10 bg-linear-to-br from-purple-500/10 via-pink-500/5 to-blue-500/10 blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-6">
-        {/* Section header */}
+       
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="inline-block mb-4 px-4 py-1 text-sm rounded-full bg-white/10 text-white/80">
             Popular Products
@@ -52,7 +52,6 @@ export default function PopularSection() {
           </p>
         </div>
 
-        {/* Products grid */}
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {popularProducts.map((item, index) => (
             <ItemCard item={item} key={index}/>

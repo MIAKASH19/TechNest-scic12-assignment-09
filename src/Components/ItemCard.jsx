@@ -4,10 +4,10 @@ export default function ItemCard({ item }) {
   return (
     <div className="group relative rounded-2xl overflow-hidden bg-black/60 border border-white/10 backdrop-blur hover:border-purple-400/40 transition">
 
-      {/* Glow effect */}
+      
       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-linear-to-br from-purple-500/20 via-pink-500/10 to-blue-500/20 blur-2xl" />
 
-      {/* Image */}
+     
       <div className="relative h-48 bg-white/5 flex items-center justify-center">
         <img
           src={item.image}
@@ -16,7 +16,7 @@ export default function ItemCard({ item }) {
         />
       </div>
 
-      {/* Content */}
+     
       <div className="relative p-5 space-y-3">
         <h3 className="text-lg font-semibold text-white">
           {item.name}
@@ -26,7 +26,6 @@ export default function ItemCard({ item }) {
           {item.description}
         </p>
 
-        {/* Price & rating */}
         <div className="flex items-center justify-between">
           <span className="text-xl font-bold bg-linear-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             ৳ {item.price}
@@ -37,7 +36,6 @@ export default function ItemCard({ item }) {
           </span>
         </div>
 
-        {/* CTA */}
         <Link
           href={`/items/${item.id}`}
           className="block text-center mt-4 py-2 rounded-lg bg-white text-black font-medium hover:bg-gray-200 transition"

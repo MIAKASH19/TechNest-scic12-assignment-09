@@ -5,15 +5,17 @@ import WhychooseUs from '@/Components/WhychooseUs';
 import Testimonials from './../Components/Testimonial';
 import CTA from '@/Components/CTA';
 import Popular from '@/Components/Popular';
+import FaqSection from '@/Components/FAQ';
 
 export default function Home() {
   return (
     <div>
-      <Banner></Banner>
+      <Banner />
       <WhychooseUs />
       <Popular />
-      <HowItWorks/>
-      <Testimonials/>
+      <HowItWorks />
+      <Testimonials />
+      <FaqSection />
       <CTA />
     </div>
   )

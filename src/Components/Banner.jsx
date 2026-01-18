@@ -20,11 +20,11 @@ export default function Banner() {
   ];
   return (
     <section className="relative overflow-hidden">
-      {/* Background glow */}
+      
       <div className="absolute inset-0 -z-10 bg-linear-to-br from-purple-500/20 via-pink-500/10 to-blue-500/20 blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-6 py-24 grid gap-16 md:grid-cols-2 items-center">
-        {/* Left content */}
+        
         <div>
           <span className="inline-block mb-4 px-4 py-1 text-sm rounded-full bg-white/10 text-white/80">
             Smart Shopping Starts Here
@@ -42,7 +42,6 @@ export default function Banner() {
             unbeatable prices — all in one modern e-commerce experience.
           </p>
 
-          {/* CTA */}
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
               href="/items"

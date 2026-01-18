@@ -7,7 +7,7 @@ export default function ItemsPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/items")
+    fetch("https://tech-nest-server.vercel.app/items")
       .then((res) => res.json())
       .then((data) => {
         setItems(data);
@@ -17,11 +17,11 @@ export default function ItemsPage() {
 
   return (
     <section className="relative overflow-hidden min-h-screen">
-      {/* Background glow */}
+      
       <div className="absolute inset-0 -z-10 bg-linear-to-br from-purple-500/20 via-pink-500/10 to-blue-500/20 blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-6 py-20">
-        {/* Page Header */}
+       
         <div className="mb-14 text-center">
           <span className="inline-block mb-4 px-4 py-1 text-sm rounded-full bg-white/10 text-white/70">
             Our Collection
@@ -40,7 +40,7 @@ export default function ItemsPage() {
           </p>
         </div>
 
-        {/* Loading */}
+        
         {loading && (
           <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {Array.from({ length: 8 }).map((_, i) => (
@@ -52,7 +52,7 @@ export default function ItemsPage() {
           </div>
         )}
 
-        {/* Items Grid */}
+        
         {!loading && (
           <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {items.map((item) => (

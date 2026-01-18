@@ -26,11 +26,9 @@ const features = [
 export default function WhychooseUs() {
   return (
     <section className="relative overflow-hidden border-t border-white/10">
-      {/* Background glow (same style as banner) */}
       <div className="absolute inset-0 -z-10 bg-linear-to-br from-purple-500/10 via-pink-500/5 to-blue-500/10 blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-6 py-24">
-        {/* Header */}
         <div className="text-center max-w-2xl mx-auto">
           <span className="inline-block mb-4 px-4 py-1 text-sm rounded-full bg-white/10 text-white/80">
             Why Choose Us
@@ -49,7 +47,6 @@ export default function WhychooseUs() {
           </p>
         </div>
 
-        {/* Features grid */}
         <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, i) => (
             <div

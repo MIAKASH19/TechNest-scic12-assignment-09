@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-white/10 bg-black text-white">
       <div className="max-w-7xl mx-auto px-6 py-12 grid gap-10 md:grid-cols-3">
-        {/* Brand */}
+       
         <div>
           <h1
             className="text-xl font-bold tracking-tight bg-linear-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
@@ -17,7 +17,6 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Navigation */}
         <div>
           <h3 className="text-sm font-semibold uppercase tracking-wider text-white/80">
             Navigation
@@ -46,7 +45,6 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Social / Info */}
         <div>
           <h3 className="text-sm font-semibold uppercase tracking-wider text-white/80">
             Connect
@@ -70,7 +68,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom bar */}
       <div className="border-t border-white/10 py-4 text-center text-sm text-white/60">
         © {new Date().getFullYear()} TechNest. All rights reserved.
       </div>

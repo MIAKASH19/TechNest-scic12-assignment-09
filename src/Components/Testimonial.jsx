@@ -24,11 +24,9 @@ const testimonials = [
 export default function Testimonials() {
   return (
     <section className="relative overflow-hidden border-t border-white/10">
-      {/* Background glow */}
       <div className="absolute inset-0 -z-10 bg-linear-to-br from-purple-500/10 via-pink-500/5 to-blue-500/10 blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-6 py-24">
-        {/* Header */}
         <div className="text-center max-w-2xl mx-auto">
           <span className="inline-block mb-4 px-4 py-1 text-sm rounded-full bg-white/10 text-white/80">
             Testimonials
@@ -46,14 +44,12 @@ export default function Testimonials() {
           </p>
         </div>
 
-        {/* Testimonial cards */}
         <div className="mt-16 grid gap-8 md:grid-cols-3">
           {testimonials.map((item, i) => (
             <div
               key={i}
               className="rounded-2xl border border-white/10 bg-black/60 backdrop-blur p-6 hover:bg-white/10 transition"
             >
-              {/* Stars */}
               <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (
                   <Star

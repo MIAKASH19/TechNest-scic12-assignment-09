@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
 import { Mail, Lock } from "lucide-react";
+import Swal from "sweetalert2";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -15,20 +15,38 @@ export default function LoginPage() {
 
     if (email === "admin@example.com" && password === "123456") {
       document.cookie = "auth=true; path=/";
+
+      window.dispatchEvent(new Event("authChange"));
+
+      Swal.fire({
+        toast: true,
+        position: "top-end",
+        icon: "success",
+        title: "Login successful",
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: true,
+      });
+
       router.push("/items");
     } else {
-      alert("Invalid credentials");
+      Swal.fire({
+        icon: "error",
+        title: "Invalid credentials",
+        showConfirmButton: false,
+        timer: 2000,
+      });
     }
   };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background glow */}
+      
       <div className="absolute inset-0 -z-10 bg-linear-to-br from-purple-500/20 via-pink-500/10 to-blue-500/20 blur-3xl" />
 
       <div className="w-full max-w-md mx-auto px-6">
         <div className="rounded-3xl border border-white/10 bg-black/60 backdrop-blur p-8">
-          {/* Header */}
+          
           <div className="text-center">
             <span className="inline-block mb-4 px-4 py-1 text-sm rounded-full bg-white/10 text-white/80">
               Welcome Back
@@ -46,9 +64,8 @@ export default function LoginPage() {
             </p>
           </div>
 
-          {/* Form */}
           <form onSubmit={handleLogin} className="mt-10 space-y-6">
-            {/* Email */}
+            
             <div>
               <label className="text-sm text-white/70">Email</label>
               <div className="mt-2 relative">
@@ -63,7 +80,7 @@ export default function LoginPage() {
               </div>
             </div>
 
-            {/* Password */}
+            
             <div>
               <label className="text-sm text-white/70">Password</label>
               <div className="mt-2 relative">
@@ -79,7 +96,7 @@ export default function LoginPage() {
             </div>
 
 
-            {/* Button */}
+            
             <button
               type="submit"
               className="w-full rounded-lg bg-white text-black py-3 font-medium hover:bg-gray-200 transition"
